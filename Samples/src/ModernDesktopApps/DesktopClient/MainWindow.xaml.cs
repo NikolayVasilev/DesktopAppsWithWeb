@@ -22,14 +22,20 @@ namespace DesktopClient
     /// </summary>
     public partial class MainWindow : Window
     {
-        private PlanetsViewModel viewModel;
+        private ViewModelBase viewModel;
 
         public MainWindow()
         {
             InitializeComponent();
 
             this.viewModel = new PlanetsViewModel(new MySWAPIRestClient());
+            //this.viewModel = new FilmsViewModel(new MySWAPIRestClient());
             this.DataContext = this.viewModel;
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            await this.viewModel.RefreshAsync();
         }
     }
 }

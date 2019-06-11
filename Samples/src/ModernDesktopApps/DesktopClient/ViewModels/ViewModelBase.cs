@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace DesktopClient.ViewModels
 {
@@ -10,6 +11,16 @@ namespace DesktopClient.ViewModels
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public virtual void Refresh()
+        {
+
+        }
+
+        public virtual async Task RefreshAsync()
+        {
+
         }
     }
 }

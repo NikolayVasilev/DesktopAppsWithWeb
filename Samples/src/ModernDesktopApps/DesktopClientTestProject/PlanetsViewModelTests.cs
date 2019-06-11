@@ -11,13 +11,13 @@ namespace DesktopClientTestProject
         public void TestPlanetsViewModel()
         {
             var viewModel = new PlanetsViewModel(new TestSWAPIRestClient());
-            viewModel.PlanetNames.Clear();
+            viewModel.ItemsSource.Clear();
 
-            Assert.AreEqual(0, viewModel.PlanetNames.Count);
+            Assert.AreEqual(0, viewModel.ItemsSource.Count);
 
             viewModel.Refresh();
 
-            Assert.IsTrue(viewModel.PlanetNames.Count > 0);
+            Assert.IsTrue(viewModel.ItemsSource.Count > 0);
         }
     }
 }

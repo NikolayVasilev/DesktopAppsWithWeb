@@ -8,38 +8,35 @@ using System.Threading.Tasks;
 
 namespace DesktopClient.ViewModels
 {
-    public class PlanetsViewModel : ViewModelBase
+    public class FilmsViewModel : ViewModelBase
     {
         private ISWAPIRestClient restClient;
 
-        private ObservableCollection<string> planetNames;
+        private ObservableCollection<string> filmNames;
 
         public ObservableCollection<string> ItemsSource
         {
             get
             {
-                return planetNames;
+                return filmNames;
             }
             set
             {
-                planetNames = value;
+                filmNames = value;
                 OnPropertyChanged();
             }
         }
 
-        public PlanetsViewModel(ISWAPIRestClient restClientImpl)
+        public FilmsViewModel(ISWAPIRestClient restClientImpl)
         {
             this.ItemsSource = new ObservableCollection<string>();
 
             this.restClient = restClientImpl;
-
-            this.Refresh();
         }
 
-        public override void Refresh()
+        public override async Task RefreshAsync()
         {
-            this.ItemsSource = new ObservableCollection<string>(this.restClient.GetPlanetNames());
+            this.ItemsSource = new ObservableCollection<string>(await this.restClient.GetFilmNames());
         }
-
     }
 }

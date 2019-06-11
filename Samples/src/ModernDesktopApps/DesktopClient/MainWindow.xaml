@@ -7,8 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="Refresh" Click="Button_Click"/>
         <ListBox x:Name="ListBoxPlanets"
-                 ItemsSource="{Binding PlanetNames}">
+                 ItemsSource="{Binding ItemsSource}"
+                 Grid.Row="1">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">

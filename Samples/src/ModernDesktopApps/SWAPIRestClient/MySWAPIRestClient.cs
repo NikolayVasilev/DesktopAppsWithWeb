@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SWAPIRestClient
 {
@@ -11,7 +12,7 @@ namespace SWAPIRestClient
     {
         private SharpTrooperCore serviceConsumerCore = new SharpTrooperCore();
 
-        public IEnumerable<string> GetFilmNames()
+        public async Task<IEnumerable<string>> GetFilmNames()
         {
             var films = serviceConsumerCore.GetAllFilms();
 
