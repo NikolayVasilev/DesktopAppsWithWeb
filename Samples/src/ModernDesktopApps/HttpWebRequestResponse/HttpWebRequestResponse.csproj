@@ -54,7 +54,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SharpTrooper\SharpTrooper.csproj">
+    <ProjectReference Include="..\SharpTrooper\SharpTrooper.csproj">
       <Project>{64fa6a89-9042-42a7-a331-a8d6fbc79340}</Project>
       <Name>SharpTrooper</Name>
     </ProjectReference>

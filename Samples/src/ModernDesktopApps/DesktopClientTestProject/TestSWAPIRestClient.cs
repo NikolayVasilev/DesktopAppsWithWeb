@@ -8,12 +8,7 @@ using System.Threading.Tasks;
 namespace DesktopClientTestProject
 {
     class TestSWAPIRestClient : ISWAPIRestClient
-    {
-        public IEnumerable<string> GetFilmNames()
-        {
-            throw new NotImplementedException();
-        }
-
+    {  
         public IEnumerable<SharpTrooper.Entities.Planet> GetInhabitedPlanets()
         {
             throw new NotImplementedException();
@@ -34,6 +29,11 @@ namespace DesktopClientTestProject
                 "Kamino",
                 "Geonosis"
             };
+        }
+
+        public Task<IEnumerable<string>> GetFilmNames()
+        {
+            throw new NotImplementedException();
         }
     }
 }

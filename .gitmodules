@@ -1,0 +1,3 @@
+[submodule "Samples/src/ModernDesktopApps/SharpTrooper"]
+	path = Samples/src/ModernDesktopApps/SharpTrooper
+	url = https://github.com/olcay/SharpTrooper.git

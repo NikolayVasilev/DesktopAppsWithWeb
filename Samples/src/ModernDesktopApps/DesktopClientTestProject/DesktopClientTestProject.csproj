@@ -57,13 +57,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SharpTrooper\SharpTrooper.csproj">
-      <Project>{64fa6a89-9042-42a7-a331-a8d6fbc79340}</Project>
-      <Name>SharpTrooper</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DesktopClient\DesktopClient.csproj">
       <Project>{c8d4088b-4a03-4f82-af73-042c19a4d961}</Project>
       <Name>DesktopClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpTrooper\SharpTrooper.csproj">
+      <Project>{64fa6a89-9042-42a7-a331-a8d6fbc79340}</Project>
+      <Name>SharpTrooper</Name>
     </ProjectReference>
     <ProjectReference Include="..\SWAPIRestClient\SWAPIRestClient.csproj">
       <Project>{bd7aefd9-d281-4efa-bc62-23ec4d04ab7f}</Project>
